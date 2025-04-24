@@ -1,0 +1,18 @@
+# Rust build artifacts
+target/
+**/*.rs.bk
+
+# WASM build artifacts
+/frontend/wasm/
+*.wasm
+*.js
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS specific files
+.DS_Store
+Thumbs.db

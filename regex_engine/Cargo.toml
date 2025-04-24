@@ -1,0 +1,28 @@
+[package]
+name = "regex_engine"
+version = "0.1.0"
+edition = "2021"
+description = "Regex matcher compiled to WebAssembly"
+license = "MIT"
+repository = "https://github.com/tkircsi/regex-playground-wasm"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
+regex = "1"
+serde = { version = "1", features = ["derive"] }
+serde-wasm-bindgen = "0.6"
+
+[features]
+default = ["console_error_panic_hook"]
+
+[dependencies.console_error_panic_hook]
+version = "0.1"
+optional = true
+
+[profile.release]
+opt-level = "z"   # Optimize for size
+lto = true        # Link time optimization
+codegen-units = 1 # Better optimization

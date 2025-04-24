@@ -1,0 +1,22 @@
+
+---
+
+## 📢 Next Steps (Visibility + Learning)
+
+- **Push to GitHub**, with a clean README, GIF demo, and a live link via GitHub Pages
+- Post it on:
+  - [r/rust](https://reddit.com/r/rust)
+  - [r/webdev](https://reddit.com/r/webdev)
+  - [Hacker News "Show HN"](https://news.ycombinator.com/submit)
+  - Dev.to blog post
+- Add advanced features (e.g., shareable permalinks, "fork this regex", etc.)
+- Convert it into a **custom embeddable widget** for dev blogs
+
+---
+
+If you want, I can:
+- Help you set up the GitHub repo (with CI if desired)
+- Add tests, UX polish, or a clean dark mode UI
+- Guide you through `wasm-bindgen` and debugging tips
+
+Just say the word and let’s ship it together.

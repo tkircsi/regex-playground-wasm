@@ -1,0 +1,214 @@
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --background-color: #f8f9fa;
+    --card-background: #ffffff;
+    --example-card-bg: #ffffff;
+    --text-color: #1e293b;
+    --border-color: #e2e8f0;
+    --error-color: #dc2626;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.input-group, .output-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.input-group-text {
+    background-color: var(--background-color);
+    border-right: none;
+}
+
+.form-control {
+    border-left: none;
+}
+
+.form-control:focus {
+    border-color: #dee2e6;
+    box-shadow: none;
+}
+
+.form-control:focus + .input-group-text {
+    border-color: #dee2e6;
+}
+
+#test {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    resize: vertical;
+}
+
+#output {
+    background-color: var(--card-background);
+    padding: 1rem;
+    border-radius: 0.25rem;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    min-height: 100px;
+    margin: 0;
+}
+
+.form-text {
+    color: var(--secondary-color);
+    font-size: 0.875rem;
+}
+
+.error {
+    color: var(--error-color);
+    border-color: var(--error-color);
+}
+
+.card {
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+/* Example cards styling */
+.accordion-body .card {
+    background-color: var(--example-card-bg);
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-body .card-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.accordion-body .card-text {
+    color: #212529;
+    margin-bottom: 0.5rem;
+}
+
+.accordion-body .card-text code {
+    background-color: #f8f9fa;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    color: #e83e8c;
+    font-size: 0.875rem;
+}
+
+.accordion-body .card-text.small {
+    color: #6c757d;
+    font-size: 0.875rem;
+}
+
+.accordion-body .btn-outline-primary {
+    margin-top: 1rem;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #212529;
+        --card-background: #2c3034;
+        --secondary-color: #adb5bd;
+        --example-card-bg: #2c3034;
+    }
+
+    body {
+        background-color: var(--background-color);
+        color: #f8f9fa;
+    }
+
+    .card {
+        background-color: var(--card-background);
+    }
+
+    .form-control, .input-group-text {
+        background-color: var(--card-background);
+        border-color: #495057;
+        color: #f8f9fa;
+    }
+
+    .form-control:focus {
+        background-color: var(--card-background);
+        color: #f8f9fa;
+    }
+
+    #output {
+        background-color: var(--background-color);
+        color: #f8f9fa;
+    }
+
+    /* Dark mode example cards */
+    .accordion-body .card {
+        background-color: var(--example-card-bg);
+        border-color: #495057;
+    }
+
+    .accordion-body .card-title {
+        color: #0dcaf0;
+    }
+
+    .accordion-body .card-text {
+        color: #f8f9fa;
+    }
+
+    .accordion-body .card-text code {
+        background-color: #343a40;
+        color: #ff6b6b;
+    }
+
+    .accordion-body .card-text.small {
+        color: #adb5bd;
+    }
+
+    .accordion-body .btn-outline-primary {
+        border-color: #0dcaf0;
+        color: #0dcaf0;
+    }
+
+    .accordion-body .btn-outline-primary:hover {
+        background-color: #0dcaf0;
+        color: #212529;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        margin: 1rem auto;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
