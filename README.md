@@ -9,6 +9,7 @@ A web-based regular expression testing tool built with Rust and WebAssembly. Thi
 - Clean, responsive user interface
 - Built with Rust and WebAssembly for performance
 - No server-side processing required
+- Interactive examples with one-click testing
 
 ## User Interface
 
@@ -17,6 +18,7 @@ The interface consists of three main components:
 1. **Regular Expression Input**
    - A text field where you can enter your regex pattern
    - Updates results in real-time as you type
+   - Includes helpful tooltips and examples
 
 2. **Test Text Input**
    - A textarea where you can enter the text to test against
@@ -28,6 +30,11 @@ The interface consists of three main components:
      - The matched text in quotes
      - The start and end positions in the text
    - Updates automatically as you modify either the pattern or test text
+
+4. **Interactive Examples**
+   - Collapsible section with common regex patterns
+   - One-click testing of examples
+   - Covers various use cases like word matching, email extraction, date finding, and number detection
 
 ## Setup
 
@@ -54,20 +61,18 @@ The interface consists of three main components:
 
 Here are some example regex patterns you can try:
 
-1. **Find all words starting with 't'**
+1. **Find words starting with 't'**
    ```
    Pattern: \bt\w*\b
-   Test Text: this is a test string with two words starting with t
+   Test Text: "The quick brown fox jumps over the lazy dog"
    Output:
-   "this" (position 0-4)
-   "test" (position 10-14)
-   "two" (position 20-23)
+   "The" (position 0-3)
    ```
 
 2. **Find email addresses**
    ```
    Pattern: \b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b
-   Test Text: Contact me at john.doe@example.com or support@company.org
+   Test Text: "Contact me at john.doe@example.com or support@company.org"
    Output:
    "john.doe@example.com" (position 13-33)
    "support@company.org" (position 37-55)
@@ -76,7 +81,7 @@ Here are some example regex patterns you can try:
 3. **Find dates in YYYY-MM-DD format**
    ```
    Pattern: \b\d{4}-\d{2}-\d{2}\b
-   Test Text: The event is on 2024-04-23 and ends on 2024-04-25
+   Test Text: "The event is on 2024-04-23 and ends on 2024-04-25"
    Output:
    "2024-04-23" (position 15-25)
    "2024-04-25" (position 40-50)
@@ -85,7 +90,7 @@ Here are some example regex patterns you can try:
 4. **Find all numbers**
    ```
    Pattern: \b\d+\b
-   Test Text: There are 42 apples and 7 oranges in 3 baskets
+   Test Text: "There are 42 apples and 7 oranges in 3 baskets"
    Output:
    "42" (position 10-12)
    "7" (position 22-23)
